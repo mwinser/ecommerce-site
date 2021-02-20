@@ -1,6 +1,6 @@
 import React from "react"
-import Hero from "../Hero"
-import Featured from "../Featured"
+import Hero from "../components/Hero"
+import Featured from "../components/Featured"
 
 function Home () {
     return(

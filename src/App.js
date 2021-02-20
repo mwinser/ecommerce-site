@@ -1,9 +1,9 @@
 import './App.css';
 import {Switch, Route} from "react-router-dom"
-import Navbar from "./Navbar"
+import Navbar from "./components/Navbar"
 import Home from "./pages/Home"
 import Cart from "./pages/Cart"
-import Footer from "./Footer"
+import Footer from "./components/Footer"
 
 function App() {
   return (
