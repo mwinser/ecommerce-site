@@ -1,4 +1,4 @@
-[
+const data = [
     {
         "id": "1",
         "name":"Pink Rose",
@@ -28,3 +28,5 @@
         "isFeatured": false
     }
 ]
+
+export default data
