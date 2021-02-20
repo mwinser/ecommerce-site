@@ -26,6 +26,20 @@ const data = [
         "img": "https://images.pexels.com/photos/2058498/pexels-photo-2058498.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=162&w=235",
         "price": "$69.99",
         "isFeatured": false
+    },
+    {
+        "id": "5",
+        "name":"Azaleas",
+        "img": "https://images.pexels.com/photos/5718/flower-book-houseplants-azalea.jpg?auto=compress&cs=tinysrgb&dpr=2&h=162&w=235",
+        "price": "$19.99",
+        "isFeatured": false
+    },
+    {
+        "id": "6",
+        "name":"Multicolored Daisies",
+        "img": "https://images.pexels.com/photos/70330/pexels-photo-70330.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=162&w=235",
+        "price": "$14.99",
+        "isFeatured": false
     }
 ]
 
