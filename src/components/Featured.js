@@ -12,7 +12,7 @@ function Featured () {
             if (item.isFeatured){
                 return (
                 <li>
-                    <Item img={item.img} name={item.name} price={item.price}/>
+                    <Item key={item.id} img={item}/>
                 </li>)
             }
             return null

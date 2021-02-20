@@ -1,12 +1,23 @@
-import React from "react"
+import React, {useContext} from "react"
+import {Context} from "../Context"
 
-function Item ({name, img, price}) {
-    
+function Item ({img}) {
+    const {addToCart, cartItems, removeFromCart} = useContext(Context)
+
+    function cartButton () {
+        if (cartItems.some(cartItem=>cartItem.id===img.id)){
+            return (<button onClick={()=>removeFromCart(img)}>Remove From Cart</button>)
+        }else {
+            return (<button onClick={()=>addToCart(img)}>Add To Cart</button>)
+        }
+    }
+
     return (
         <>
-            <img src={img}alt={name}></img>
-            <h3>{name}</h3>
-            <h4>{price}</h4>
+            <img src={img.img}alt={img.name}></img>
+            <h3>{img.name}</h3>
+            <h4>{img.price}</h4>
+            {cartButton()}
         </>
     )
 }

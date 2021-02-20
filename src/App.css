@@ -53,6 +53,12 @@ ul li {
   align-items: center;
 }
 
+.cart-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 footer {
   width: 100%;
   background: lightblue;
