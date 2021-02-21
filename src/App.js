@@ -5,6 +5,7 @@ import Home from "./pages/Home"
 import Cart from "./pages/Cart"
 import Footer from "./components/Footer"
 import Browse from "./pages/Browse"
+import ItemDetail from "./pages/ItemDetail"
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
             </Route> 
             <Route exact path="/browse">
               <Browse />
+            </Route> 
+            <Route path="/browse/:itemId">
+              <ItemDetail />
             </Route> 
           </Switch>
         </div>

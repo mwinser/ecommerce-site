@@ -1,4 +1,5 @@
 import React, {useContext} from "react"
+import {Link} from "react-router-dom"
 import {Context} from "../Context"
 
 function Item ({img}) {
@@ -18,6 +19,7 @@ function Item ({img}) {
             <h3>{img.name}</h3>
             <h4>{img.price}</h4>
             {cartButton()}
+            <Link to={`/browse/${img.id}`}><button>Product Details</button></Link>
         </>
     )
 }
