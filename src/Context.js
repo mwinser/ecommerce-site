@@ -1,10 +1,10 @@
-import React, {useState, useEffect} from "react"
+import React, {useState} from "react"
 import data from "./flowers"
 
 const Context = React.createContext()
 
 function ContextProvider({children}) {
-    const [allItems, setAllItems] = useState(data)
+    const [allItems] = useState(data)
     const [cartItems, setCartItems] = useState([])
 
     function addToCart(newItem){

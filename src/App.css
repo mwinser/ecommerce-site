@@ -11,6 +11,7 @@ body, html {
 .App {
   text-align: center;
   position: relative;
+  min-height: 100vh;
 }
 .navbar {
   width: 100%;
