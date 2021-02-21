@@ -3,7 +3,19 @@ import {Context} from "../Context"
 import Item from "../components/Item"
 
 function Cart () {
-    const {cartItems, removeFromCart} = useContext(Context)
+    const {cartItems, clearCart} = useContext(Context)
+    const isCartEmpty = cartItems.length===0
+    function fakePurchase(e) {
+        e.target.innerHTML = "Processing..."
+        e.target.disabled = true
+        setTimeout(()=>{
+        e.target.innerHTML = "Purchase Items"
+        e.target.disabled = false
+        clearCart()
+        }, 3000)
+        
+    }
+
 
     function listCartItems(){
         return (
@@ -18,9 +30,10 @@ function Cart () {
 
     return(
         <>
-            {cartItems.length>0 ? listCartItems() : (<div>Your cart is empty!</div>)}
+            {isCartEmpty ? (<div>Your cart is empty!</div>): listCartItems()}
             <h4>Total: $0.00</h4>
-            <button>Purchase Items</button>
+            {isCartEmpty ? (<button disabled>Purchase Items</button>): (<button onClick={e=>fakePurchase(e)}>Purchase Items</button>)}
+            
         </>
     )
 }

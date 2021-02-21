@@ -10,6 +10,7 @@ body, html {
 }
 .App {
   text-align: center;
+  position: relative;
 }
 .navbar {
   width: 100%;
@@ -33,6 +34,10 @@ ul li {
   align-items: center;
 }
 
+.content-wrap {
+  padding-bottom: 8em;
+}
+
 .hero {
   height: 16em;
   display: flex;
@@ -52,14 +57,25 @@ ul li {
   justify-content: space-between;
   align-items: center;
 }
+.all-items ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
 
 .cart-list {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
 footer {
   width: 100%;
+  position: absolute;
+  bottom: 0;
   background: lightblue;
 }
