@@ -18,8 +18,8 @@ function Item ({img}) {
             <img src={img.img}alt={img.name}></img>
             <h3>{img.name}</h3>
             <h4>{img.price}</h4>
+            <div><Link to={`/browse/${img.id}`}>View Product Details</Link></div>
             {cartButton()}
-            <Link to={`/browse/${img.id}`}><button>Product Details</button></Link>
         </>
     )
 }

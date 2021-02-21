@@ -1,9 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@600&display=swap');
+
+:root {
+  --primary-button-color: rgb(29, 143, 0);
+}
+
 body, html {
   padding: 0;
   margin: 0;
   width: 100%;
   box-sizing: border-box;
   overflow-x: hidden;
+  font-family: Raleway, sans-serif;
 }
 * {
   box-sizing: inherit;
@@ -13,13 +20,64 @@ body, html {
   position: relative;
   min-height: 100vh;
 }
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: unset;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  border: none;
+  background-color: var(--primary-button-color);
+  opacity: 80%;
+  color: #fff;
+  font-family: inherit;
+  margin: 2em 1em;
+  padding: .25em .75em;
+  cursor: pointer;
+  text-align: center;
+  border-radius: .5em;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.12);
+  min-width: 10ch;
+  min-height: 3em;
+  transition: 200ms all ease-in-out;
+}
+
+button:hover {
+  opacity: 100%;
+}
+
+button[disabled] {
+  background-color: rgba(0,0,0,0.2);
+  opacity: 100%;
+  cursor:not-allowed;
+}
+
+a, button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .navbar {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 1em;
+  box-shadow: 1px 0 5px rgba(0,0,0,0.15);
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5em;
   padding: 0 .5em;
 }
+
 ul {
   padding-left: 0;
 }
@@ -36,6 +94,8 @@ ul li {
 }
 
 .content-wrap {
+  margin-top: 3em;
+  padding: 0 1em;
   padding-bottom: 8em;
 }
 
@@ -46,12 +106,22 @@ ul li {
   justify-content: center;
   flex-direction: column;
   background: #9eff7b;
+  border-radius: 2em;
+  
 }
 .hero button{
-  width: 5em;
+  font-size: 1em;
   align-self: center;
 }
+.hero a:hover {
+  text-decoration: none;
+}
 
+img {
+  border-radius: .75em;
+  min-width: 235px;
+  max-height: 342px;
+}
 
 .featured ul {
   display: flex;
@@ -74,9 +144,27 @@ ul li {
   flex-wrap: wrap;
 }
 
+h2 {
+  margin: 2em;
+}
+
+p {
+  font-family: Montserrat, sans-serif;
+}
+
+.item-details {
+  display: flex;
+}
+.right {
+  padding: 0 4em ;
+}
+
+
 footer {
   width: 100%;
   position: absolute;
   bottom: 0;
   background: lightblue;
+  display: flex;
+  justify-content: space-around;
 }

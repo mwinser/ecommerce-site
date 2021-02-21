@@ -30,7 +30,7 @@ function Cart () {
 
     return(
         <>
-            {isCartEmpty ? (<div>Your cart is empty!</div>): listCartItems()}
+            {isCartEmpty ? (<h1>Your cart is empty!</h1>): listCartItems()}
             <h4>Total: $0.00</h4>
             {isCartEmpty ? (<button disabled>Purchase Items</button>): (<button onClick={e=>fakePurchase(e)}>Purchase Items</button>)}
             

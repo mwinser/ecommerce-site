@@ -20,12 +20,14 @@ function ItemDetail(props){
     return(
         <div className="item-details">
             <img src={thisItem.img} alt={thisItem.name}></img>
-            <h1>{thisItem.name}</h1>
-            <h3>{thisItem.price}</h3>
-            {cartButton()}
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae urna in libero varius maximus. Suspendisse mattis quis elit in semper. Fusce non mauris vitae sapien mattis sollicitudin. 
-            </p>
-            <p>Ut varius pellentesque aliquet. Aenean ac consectetur neque. Nullam laoreet suscipit leo eu fermentum. Morbi vel placerat tortor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce sit amet ipsum ipsum. </p>
+            <div className="right">
+                <h1>{thisItem.name}</h1>
+                <h3>{thisItem.price}</h3>
+                {cartButton()}
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae urna in libero varius maximus. Suspendisse mattis quis elit in semper. Fusce non mauris vitae sapien mattis sollicitudin. 
+                </p>
+                <p>Ut varius pellentesque aliquet. Aenean ac consectetur neque. Nullam laoreet suscipit leo eu fermentum. Morbi vel placerat tortor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce sit amet ipsum ipsum. </p>
+            </div>
         </div>
     )
 }

@@ -6,6 +6,7 @@ function Home () {
     return(
         <>
             <Hero />
+            <h2>Featured Items</h2>
             <Featured />
         </>
     )
