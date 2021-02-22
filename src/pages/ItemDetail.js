@@ -1,6 +1,7 @@
 import React, {useContext} from "react"
 import {Context} from "../Context"
 import {useParams} from "react-router-dom"
+import Featured from "../components/Featured"
 
 
 function ItemDetail(props){
@@ -18,6 +19,7 @@ function ItemDetail(props){
 
 
     return(
+        <>
         <div className="item-details">
             <img src={thisItem.img} alt={thisItem.name}></img>
             <div className="right">
@@ -29,6 +31,11 @@ function ItemDetail(props){
                 <p>Ut varius pellentesque aliquet. Aenean ac consectetur neque. Nullam laoreet suscipit leo eu fermentum. Morbi vel placerat tortor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce sit amet ipsum ipsum. </p>
             </div>
         </div>
+        <div className="more-like-this">
+            <h2>More like this:</h2>
+            <Featured/>
+        </div>
+        </>
     )
 }
 
