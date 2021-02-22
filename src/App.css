@@ -33,7 +33,7 @@ a:hover {
 button {
   border: none;
   background-color: var(--primary-button-color);
-  opacity: 80%;
+  opacity: .8;
   color: #fff;
   font-family: inherit;
   margin: 2em 1em;
@@ -48,12 +48,12 @@ button {
 }
 
 button:hover {
-  opacity: 100%;
+  opacity: 1;
 }
 
 button[disabled] {
   background-color: rgba(0,0,0,0.2);
-  opacity: 100%;
+  opacity: 1;
   cursor:not-allowed;
 }
 
