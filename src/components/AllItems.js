@@ -8,8 +8,8 @@ function AllItems () {
     return (
         <ul>
             {allItems.map(item => (
-                <li>
-                    <Item key={item.id} img={item}/>
+                <li key={item.id}>
+                    <Item img={item}/>
                 </li>
             )
             )}

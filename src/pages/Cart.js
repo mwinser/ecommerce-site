@@ -30,7 +30,7 @@ function Cart () {
 
     function subtotalCost (){
         const subtotal = cartItems.reduce((acc, item)=>acc+item.price,0)
-        return (<h4>Total: {subtotal.toLocaleString( 'en-US',{style:'currency', currency: 'USD'}) }</h4>)
+        return (<h2>Total: {subtotal.toLocaleString( 'en-US',{style:'currency', currency: 'USD'}) }</h2>)
     }
 
     return(
@@ -44,7 +44,7 @@ function Cart () {
                 <div>
                     {listCartItems()}
                     <div>
-                        <h2>{subtotalCost()}</h2>
+                        {subtotalCost()}
                         <p>Tax and Shipping Included!</p>
                         <button onClick={e=>fakePurchase(e)}>Purchase Items</button>
                     </div>  

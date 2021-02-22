@@ -11,8 +11,8 @@ function Featured () {
         {allItems.map(item => {
             if (item.isFeatured){
                 return (
-                <li>
-                    <Item key={item.id} img={item}/>
+                <li key={item.id}>
+                    <Item img={item}/>
                 </li>)
             }
             return null
