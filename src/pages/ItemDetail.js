@@ -22,7 +22,7 @@ function ItemDetail(props){
             <img src={thisItem.img} alt={thisItem.name}></img>
             <div className="right">
                 <h1>{thisItem.name}</h1>
-                <h3>{thisItem.price}</h3>
+                <h3>{thisItem.price.toLocaleString( 'en-US',{style:'currency', currency: 'USD'})}</h3>
                 {cartButton()}
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae urna in libero varius maximus. Suspendisse mattis quis elit in semper. Fusce non mauris vitae sapien mattis sollicitudin. 
                 </p>

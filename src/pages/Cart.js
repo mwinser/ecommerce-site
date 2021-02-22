@@ -28,11 +28,28 @@ function Cart () {
         )
     }
 
+    function subtotalCost (){
+        const subtotal = cartItems.reduce((acc, item)=>acc+item.price,0)
+        return (<h4>Total: {subtotal.toLocaleString( 'en-US',{style:'currency', currency: 'USD'}) }</h4>)
+    }
+
     return(
         <>
-            {isCartEmpty ? (<h1>Your cart is empty!</h1>): listCartItems()}
-            <h4>Total: $0.00</h4>
-            {isCartEmpty ? (<button disabled>Purchase Items</button>): (<button onClick={e=>fakePurchase(e)}>Purchase Items</button>)}
+            {isCartEmpty ? (
+                <div>
+                    <h1>Your cart is empty!</h1>
+                    <button disabled>Purchase Items</button>
+                </div>
+                ) : (
+                <div>
+                    {listCartItems()}
+                    <div>
+                        <h2>{subtotalCost()}</h2>
+                        <p>Tax and Shipping Included!</p>
+                        <button onClick={e=>fakePurchase(e)}>Purchase Items</button>
+                    </div>  
+                </div>
+                )}
             
         </>
     )
