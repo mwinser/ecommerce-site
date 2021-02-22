@@ -5,7 +5,7 @@ function Hero () {
     return(
     <div className="hero">
         <h1>Spring is in the air!</h1>
-        <Link to="/browse"><button>Shop All Deals</button></Link>
+        <button><Link to="/browse">Shop All Deals</Link></button>
     </div>
     )
 }

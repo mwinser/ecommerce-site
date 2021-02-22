@@ -9,7 +9,14 @@ function Item ({img}) {
         if (cartItems.some(cartItem=>cartItem.id===img.id)){
             return (<button onClick={()=>removeFromCart(img)}>Remove From Cart</button>)
         }else {
-            return (<button onClick={()=>addToCart(img)}>Add To Cart</button>)
+            return (<button onClick={()=>{
+                addToCart(img);
+                document
+                .getElementsByClassName("popout-container")[0]
+                .classList
+                .remove("offscreen")
+
+                }}>Add To Cart</button>)
         }
     }
 

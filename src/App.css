@@ -52,6 +52,10 @@ button:hover {
   opacity: 1;
 }
 
+button a:hover {
+  text-decoration: none;
+}
+
 button[disabled] {
   background-color: rgba(0,0,0,0.2);
   opacity: 1;
@@ -100,6 +104,35 @@ ul li {
   padding-bottom: 8em;
 }
 
+
+.popout-container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 500ms ease-in-out;
+}
+
+.popout-container.offscreen {
+  left: -100vw;
+}
+
+.popout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 75%;
+  max-width: 800px;
+  height: 80%;
+  box-shadow: 0 0 20vw rgba(0,0,0,0.15);
+}
+
 .hero {
   height: 16em;
   display: flex;
@@ -113,9 +146,6 @@ ul li {
 .hero button{
   font-size: 1em;
   align-self: center;
-}
-.hero a:hover {
-  text-decoration: none;
 }
 
 img {
