@@ -134,18 +134,21 @@ ul li {
 }
 
 .hero {
-  height: 16em;
+  height: 20em;
+  padding: 2em;
   display: flex;
-  align-content: center;
-  justify-content: center;
+  text-align: left;
   flex-direction: column;
-  background: #9eff7b;
+  background-image: url("https://images.pexels.com/photos/158756/flowers-plants-korea-nature-158756.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-size: cover;
+  background-repeat: no-repeat;
   border-radius: 2em;
+  box-shadow: -2px 0px 5px rgba(0,0,0,0.12);
   
 }
 .hero button{
   font-size: 1em;
-  align-self: center;
+  align-self: flex-start;
 }
 
 img {
