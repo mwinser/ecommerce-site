@@ -6,7 +6,10 @@ const Context = React.createContext()
 function ContextProvider({children}) {
     const [allItems] = useState(data)
     const [cartItems, setCartItems] = useState([])
-    const [user, setUser] = useState(null)
+    const prevRemember = localStorage.getItem('rememberMe')=== "true"
+    const prevUser = prevRemember ? localStorage.getItem('user'): null
+    const [user, setUser] = useState(prevUser)
+    const [rememberMe, setRememberMe] = useState(prevRemember)
 
     function addToCart(newItem){
         setCartItems(prevCartItems=> [...prevCartItems, newItem])
@@ -26,9 +29,12 @@ function ContextProvider({children}) {
     function logoutUser () {
         setUser(null)
     }
+    function changeRememberMe (bool) {
+        setRememberMe(bool)
+    }
 
     return (
-        <Context.Provider value={{allItems, cartItems, user, addToCart, removeFromCart, clearCart, loginUser, logoutUser}}>
+        <Context.Provider value={{allItems, cartItems, user, rememberMe, addToCart, removeFromCart, clearCart, loginUser, logoutUser, changeRememberMe}}>
             {children}
         </Context.Provider>
     )
