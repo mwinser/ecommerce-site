@@ -1,9 +1,9 @@
 import React, {useContext} from "react"
 import {Context} from "../Context"
-import Item from "../components/Item"
+import {Link} from "react-router-dom"
 
 function Cart () {
-    const {cartItems, clearCart} = useContext(Context)
+    const {cartItems, clearCart, removeFromCart} = useContext(Context)
     const isCartEmpty = cartItems.length===0
 
 
@@ -28,7 +28,15 @@ function Cart () {
         return (
             <ul className="cart-list">
                 {cartItems.map(item => (
-                <li key={item.id}><Item img={item}/></li>
+                <li key={item.id}>
+                    <img src={item.img}alt={item.name}></img>
+                    <div className="cart-deets">
+                        <h2>{item.name}</h2>
+                        <h4>{item.price.toLocaleString( 'en-US',{style:'currency', currency: 'USD'})}</h4>
+                        <div><Link to={`/browse/${item.id}`}>View Product Details</Link></div>
+                        <button onClick={()=>removeFromCart(item)}>Remove</button>
+                    </div>
+                </li>
             ))}
             </ul>
 
