@@ -229,7 +229,7 @@ img {
 .featured ul {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -311,9 +311,13 @@ p {
 
 .item-details {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1em;
 }
-.right {
-  padding: 0 4em ;
+.item-details img {
+  max-width: 150px;
 }
 
 footer {
@@ -329,39 +333,46 @@ footer {
   .navbar {
     align-items: center;
     padding: .5em 1.5em;
-  }
+    }
   .menu ul {
-      list-style: none;
-      position: relative;
-      top: unset;
-      right: unset;
-      width: unset;
-      height: unset;
-      background: none;
-      box-shadow: unset;
-      display: flex;
-      flex-direction: row;
-      font-size: 1em;
-      transform: translateX(0);
-      opacity: 1;
-  }
+    list-style: none;
+    position: relative;
+    top: unset;
+    right: unset;
+    width: unset;
+    height: unset;
+    background: none;
+    box-shadow: unset;
+    display: flex;
+    flex-direction: row;
+    font-size: 1em;
+    transform: translateX(0);
+    opacity: 1;
+    }
 
   .menu ul li {
-      width: auto;
-      padding: .5em 1.5em;
-  }
+    width: auto;
+    padding: .5em 1.5em;
+    }
   .menu ul li:last-child{
     padding-right: 0;
-  }
+    }
   .menu i {
-      display: none;
-  }
+    display: none;
+    }
 
   .featured ul li {
     margin: unset;
-  }
+    }
   
   .cart-list li{
     width: 500px;
+    }
+  .item-details{
+    flex-direction: row;
   }
+    
+  .right {
+    padding: 0 3em ;
+    } 
   }

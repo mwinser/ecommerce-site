@@ -1,5 +1,4 @@
 import React, {useState} from "react"
-import Item from "./components/Item"
 import data from "./flowers"
 
 const Context = React.createContext()
