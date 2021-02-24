@@ -1,4 +1,5 @@
 import React, {useState} from "react"
+import Item from "./components/Item"
 import data from "./flowers"
 
 const Context = React.createContext()
@@ -29,6 +30,7 @@ function ContextProvider({children}) {
     }
     function logoutUser () {
         setUser(null)
+        localStorage.clear()
     }
     function changeRememberMe (bool) {
         setRememberMe(bool)
