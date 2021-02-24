@@ -72,15 +72,14 @@ a, button {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 0 1em;
+  align-items: flex-start;
+  padding: .5em 1em 0 1em;
   box-shadow: 1px 0 5px rgba(0,0,0,0.15);
 }
 
 .logo {
   font-weight: bold;
   font-size: 1.5em;
-  padding: 0 .5em;
 }
 
 ul {
@@ -92,14 +91,63 @@ ul li {
 
 }
 
-.menu ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.menu i {
+  display: inline-block;
+  height: 30px;
 }
 
+.menu ul {
+  list-style: none;
+  position: absolute;
+  display: flex;
+  top: 40px;
+  right: 0;
+  transform: translateX(300px);
+  width: 50%;
+  background: white;
+  margin: 0;
+  padding-left: 0;
+  opacity: 0;
+  flex-direction: column;
+  box-shadow: 1px 5px 5px rgba(0,0,0,0.15);
+  z-index: 1;
+  transition: all .5s;
+}
+.menu ul.nav-open{
+transform: translateX(0);
+  opacity: 1;
+}
+.menu ul li {
+  padding: 1em 0;
+  font-size: 1.3em;
+}
+
+.ex {
+  stroke:black;
+  stroke-width:3;
+  stroke-linecap: round;
+  transition: transform ease-in-out .5s;
+  transform-origin: 50% 50%;
+}
+.top {
+  transform: translateY(-25%)
+}
+.bottom {
+  transform: translateY(25%)
+}
+.one {
+  transform: rotate(45deg)  
+}
+.two {
+  transform: scaleX(.1)
+}
+.three {
+  transform: rotate(-45deg)
+}
+
+
 .content-wrap {
-  margin-top: 3em;
+  margin-top: 2em;
   padding: 0 1em;
   padding-bottom: 8em;
 }
@@ -158,9 +206,14 @@ img {
 }
 
 .featured ul {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+}
+.featured ul * {
+  margin: .5em;
 }
 .all-items ul {
   width: 100%;
@@ -183,7 +236,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-width: 400px;
+  width: 300px;
   margin: 1em 0;
 }
 
@@ -228,7 +281,7 @@ img {
 }
 
 h2 {
-  margin: 2em;
+  margin: 2em 2em 1em 2em;
 }
 
 p {
@@ -250,3 +303,44 @@ footer {
   display: flex;
   justify-content: space-around;
 }
+
+@media (min-width:600px){
+  .navbar {
+    align-items: center;
+    padding: .5em 1.5em;
+  }
+  .menu ul {
+      list-style: none;
+      position: relative;
+      top: unset;
+      right: unset;
+      width: unset;
+      height: unset;
+      background: none;
+      box-shadow: unset;
+      display: flex;
+      flex-direction: row;
+      font-size: 1em;
+      transform: translateX(0);
+      opacity: 1;
+  }
+
+  .menu ul li {
+      width: auto;
+      padding: .5em 1.5em;
+  }
+  .menu ul li:last-child{
+    padding-right: 0;
+  }
+  .menu i {
+      display: none;
+  }
+
+  .featured ul li {
+    margin: unset;
+  }
+  
+  .cart-list li{
+    width: 500px;
+  }
+  }
