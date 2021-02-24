@@ -10,6 +10,7 @@ function ContextProvider({children}) {
     const prevUser = prevRemember ? localStorage.getItem('user'): null
     const [user, setUser] = useState(prevUser)
     const [rememberMe, setRememberMe] = useState(prevRemember)
+    const [showPopUps, setShowPopUps] = useState(true)
 
     function addToCart(newItem){
         setCartItems(prevCartItems=> [...prevCartItems, newItem])
@@ -32,9 +33,24 @@ function ContextProvider({children}) {
     function changeRememberMe (bool) {
         setRememberMe(bool)
     }
+    function disableShowPopUps () {
+        setShowPopUps(false)
+    }
 
     return (
-        <Context.Provider value={{allItems, cartItems, user, rememberMe, addToCart, removeFromCart, clearCart, loginUser, logoutUser, changeRememberMe}}>
+        <Context.Provider value={
+            {allItems, 
+            cartItems, 
+            user, 
+            rememberMe, 
+            showPopUps, 
+            addToCart, 
+            removeFromCart, 
+            clearCart, 
+            loginUser, 
+            logoutUser, 
+            changeRememberMe,
+            disableShowPopUps}}>
             {children}
         </Context.Provider>
     )

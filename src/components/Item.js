@@ -1,24 +1,27 @@
-import React, {useContext} from "react"
+import React, {useContext, useState} from "react"
 import {Link} from "react-router-dom"
 import {Context} from "../Context"
 
 function Item ({img}) {
-    const {addToCart, cartItems, removeFromCart} = useContext(Context)
+    const {addToCart, cartItems, removeFromCart, showPopUps} = useContext(Context)
+   
 
     function cartButton () {
         if (cartItems.some(cartItem=>cartItem.id===img.id)){
             return (<button onClick={()=>removeFromCart(img)}>Remove From Cart</button>)
         }else {
             return (<button onClick={()=>{
-                addToCart(img);
-                document
-                .getElementsByClassName("popout-container")[0]
-                .classList
-                .remove("offscreen")
-
+                addToCart(img)
+                if (showPopUps){
+                    document.getElementsByClassName("popout-container")[0]
+                    .classList
+                    .remove("offscreen")
+                    }
                 }}>Add To Cart</button>)
         }
     }
+
+
 
     return (
         <>
