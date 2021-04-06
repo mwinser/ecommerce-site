@@ -17,7 +17,7 @@ function Navbar () {
     useEffect(()=>{toggleMenu(false)},[location])
     return (
     <nav className="navbar">
-        <div className="logo">.petals</div>
+        <div className="logo"></div>
         <div className="menu">
         <i onClick={()=>toggleMenu()}>
           <svg id="ex" height="30" width="30">
