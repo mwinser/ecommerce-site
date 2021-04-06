@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@600&display=swap');
 
 :root {
-  --primary-button-color: rgb(29, 143, 0);
+  --primary-button-color: rgb(91, 224, 165);
 }
 
 body, html {
@@ -30,12 +30,13 @@ a:visited {
 }
 a:hover {
   text-decoration: underline;
+  color:rgb(255, 97, 221)
 }
 
 button {
   border: none;
   background-color: var(--primary-button-color);
-  opacity: .8;
+  opacity: 1;
   color: #fff;
   font-family: inherit;
   margin: 2em 1em;
@@ -50,11 +51,12 @@ button {
 }
 
 button:hover {
-  opacity: 1;
+  opacity: .8;
 }
 
 button a:hover {
   text-decoration: none;
+  color: white;
 }
 
 button[disabled] {
@@ -329,7 +331,8 @@ footer {
   width: 100%;
   position: absolute;
   bottom: 0;
-  background: lightblue;
+  color: white;
+  background: var(--primary-button-color);
   display: flex;
   justify-content: space-around;
 }
