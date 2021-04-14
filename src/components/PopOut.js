@@ -1,7 +1,7 @@
 import React, {useContext, useEffect} from "react"
 import {Context} from "../Context"
 import {Link, useLocation} from "react-router-dom"
-import BriefCartList from "./BriefCartList"
+import CartList from "./CartList"
 
 function PopOut () {
     const {disableShowPopUps} = useContext(Context)
@@ -25,7 +25,7 @@ function PopOut () {
                 </svg>
             </i>
             <h1>Your cart:</h1>
-            <BriefCartList/>
+            <CartList/>
             <button><Link to="/cart">Go to Checkout</Link></button>
             <label>
                 <input type="checkbox" onChange={()=>{disableShowPopUps();sendOffScreen()}}></input> 
