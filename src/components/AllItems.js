@@ -23,7 +23,7 @@ function AllItems () {
                     )
                 .map(item => (
                     <li key={item.id}>
-                        <Item img={item}/>
+                        <Item item={item}/>
                     </li>
                 )
             )}
