@@ -1,18 +1,20 @@
-import React, {useContext} from "react"
+import React, {useContext, useEffect} from "react"
 import {Context} from "../Context"
-import {Link} from "react-router-dom"
+import {Link, useLocation} from "react-router-dom"
 import BriefCartList from "./BriefCartList"
 
 function PopOut () {
     const {disableShowPopUps} = useContext(Context)
-
+    const location= useLocation()
     function sendOffScreen(){
         document
             .getElementsByClassName("popout-container")[0]
             .classList
             .add("offscreen")
     }
-
+    //close menu if url changes
+    useEffect(()=>{sendOffScreen()},[location])
+    
     return (
     <div className="popout-container offscreen">
         <div className="popout">
