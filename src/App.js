@@ -7,6 +7,7 @@ import Footer from "./components/Footer"
 import Browse from "./pages/Browse"
 import ItemDetail from "./pages/ItemDetail"
 import Login from "./pages/Login"
+import PopOut from './components/PopOut';
 
 function App() {
   return (
@@ -14,26 +15,15 @@ function App() {
       <Navbar />
         <div className="content-wrap">
           <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route exact path="/login">
-              <Login />
-            </Route> 
-            <Route exact path="/cart">
-              <Cart />
-            </Route> 
-            <Route exact path="/browse">
-              <Browse />
-            </Route> 
-            <Route path="/browse/:itemId">
-              <ItemDetail />
-            </Route> 
+            <Route exact path="/"><Home /></Route>
+            <Route exact path="/login"><Login /></Route> 
+            <Route exact path="/cart"><Cart /></Route> 
+            <Route exact path="/browse"><Browse /></Route> 
+            <Route path="/browse/:itemId"><ItemDetail /></Route> 
           </Switch>
         </div>
-      
       <Footer />
-
+      <PopOut />
     </div>
   );
 }
