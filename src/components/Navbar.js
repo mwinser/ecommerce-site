@@ -17,23 +17,24 @@ function Navbar () {
 
     return (
     <nav className="navbar">
-        <div className="logo"></div>
-        <div className="menu">
-        <i onClick={()=>toggleMenu()}>
-          <svg id="ex" height="30" width="30">
-            <line className={isMenuOpen ? "ex top one" : "ex top"} x1="3" y1="15" x2="27" y2="15"  />
-            <line className={isMenuOpen ? "ex two" : "ex"} x1="3" y1="15" x2="27" y2="15" />
-            <line className={isMenuOpen ? "ex bottom three" : "ex bottom"} x1="3" y1="15" x2="27" y2="15" />
-          </svg>
-        </i>
-        <ul className= {isMenuOpen ? 'nav-open': null}>
-            <Link to="/"><li>Home</li></Link>
-            <Link to="/browse"><li>Browse</li></Link>
-            <Link to="/cart"><li>{cartItems.length>0 ? `Cart(${cartItems.length})` : "Cart"}</li></Link>
-            <Link to="/login"><li>{user? user: "Login"}</li></Link>
-        </ul>
+        <div className="navbar-content">
+          <div className="logo"></div>
+          <div className="menu">
+          <i onClick={()=>toggleMenu()}>
+            <svg id="ex" height="30" width="30">
+              <line className={isMenuOpen ? "ex top one" : "ex top"} x1="3" y1="15" x2="27" y2="15"  />
+              <line className={isMenuOpen ? "ex two" : "ex"} x1="3" y1="15" x2="27" y2="15" />
+              <line className={isMenuOpen ? "ex bottom three" : "ex bottom"} x1="3" y1="15" x2="27" y2="15" />
+            </svg>
+          </i>
+          <ul className= {isMenuOpen ? 'nav-open': null}>
+              <Link to="/"><li>Home</li></Link>
+              <Link to="/browse"><li>Browse</li></Link>
+              <Link to="/cart"><li>{cartItems.length>0 ? `Cart(${cartItems.length})` : "Cart"}</li></Link>
+              <Link to="/login"><li>{user? user: "Login"}</li></Link>
+          </ul>
+          </div>
         </div>
-        
     </nav>
     )
 }
