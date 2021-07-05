@@ -3,7 +3,7 @@ import React from "react"
 function Footer () {
     return (
         <footer>
-            <p>by <a href="http://www.mwinser.com">Michael Winser</a> Copyright 2021</p>
+            <p>by <a href="http://www.mwinser.com">mwinser</a></p>
             <ul className="social-icon-container">
                 <li className="social-icon">
                     <svg role="img" viewBox="0 0 24 24" height="24px" width="24px" xmlns="http://www.w3.org/2000/svg">
