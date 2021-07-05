@@ -336,6 +336,12 @@ footer {
   display: flex;
   justify-content: space-around;
 }
+.social-icon-container {
+  display: flex;
+}
+.social-icon {
+  cursor: pointer;
+}
 
 @media (min-width:600px){
   .navbar {
