@@ -353,12 +353,17 @@ footer {
   background: var(--primary-button-color);
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 .social-icon-container {
   display: flex;
 }
 .social-icon {
   cursor: pointer;
+  padding: .75rem;
+  background:rgb(255, 97, 221);
+  border-radius: 36% 64% 0% 100% / 36% 100% 0% 64%;
+  box-shadow: 0 5px 10px 0 rgba(0,0,0,0.16);
 }
 
 @media (min-width:600px){
