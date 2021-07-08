@@ -117,7 +117,7 @@ ul li {
   list-style: none;
   position: absolute;
   display: flex;
-  top: 40px;
+  top: 4rem;
   right: 0;
   transform: translateX(300px);
   width: 50%;
