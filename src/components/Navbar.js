@@ -19,9 +19,14 @@ function Navbar () {
       setAreWeHome(bool)
     }
     
-    //close menu if url changes
+    
     useEffect(()=>{
+      //if url changes:
+      //close menu
       toggleMenu(false)
+      //scroll to top
+      window.scrollTo(0, 0)
+      //show banner on home
       showHomeBanner(location.pathname==="/")
     },[location])
 
