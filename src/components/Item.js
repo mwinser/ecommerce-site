@@ -23,13 +23,13 @@ function Item (props) {
     }else {
         return (
         <>
+            <Link to={`/browse/${item.id}`}>
             <img src={item.img}alt={item.name}></img>
+            </Link>
             <div className="name-and-price">
                 <h3>{item.name}</h3>
                 <h4>${item.price}</h4>
             </div>
-
-            <div><Link to={`/browse/${item.id}`}>View Product Details</Link></div>
             <CartButton item={item}/>
         </>
         )

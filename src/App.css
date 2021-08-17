@@ -266,6 +266,10 @@ transform: translateX(0);
   align-self: flex-start;
 }
 
+h1 {
+  font-weight: normal;
+}
+
 img {
   max-height: 342px;
 }

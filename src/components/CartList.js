@@ -9,11 +9,12 @@ function CartList (props) {
             <ul className="cart-list">
                 {cartItems.map(item => (
                 <li key={item.id}>
-                    <img src={item.img}alt={item.name}></img>
+                    <Link to={`/browse/${item.id}`}>
+                        <img src={item.img}alt={item.name}/>
+                    </Link>
                     <div className="cart-deets">
                         <h3>{item.name}</h3>
                         <h4>{item.price.toLocaleString( 'en-US',{style:'currency', currency: 'USD'})}</h4>
-                        <div><Link to={`/browse/${item.id}`}>View Product Details</Link></div>
                         <button onClick={()=>removeFromCart(item)}>Remove</button>
                     </div>
                 </li>
