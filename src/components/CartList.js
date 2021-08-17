@@ -11,7 +11,7 @@ function CartList (props) {
                 <li key={item.id}>
                     <img src={item.img}alt={item.name}></img>
                     <div className="cart-deets">
-                        <h2>{item.name}</h2>
+                        <h3>{item.name}</h3>
                         <h4>{item.price.toLocaleString( 'en-US',{style:'currency', currency: 'USD'})}</h4>
                         <div><Link to={`/browse/${item.id}`}>View Product Details</Link></div>
                         <button onClick={()=>removeFromCart(item)}>Remove</button>

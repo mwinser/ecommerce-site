@@ -24,8 +24,11 @@ function Item (props) {
         return (
         <>
             <img src={item.img}alt={item.name}></img>
-            <h3>{item.name}</h3>
-            <h4>{item.price.toLocaleString( 'en-US',{style:'currency', currency: 'USD'})}</h4>
+            <div className="name-and-price">
+                <h3>{item.name}</h3>
+                <h4>${item.price}</h4>
+            </div>
+
             <div><Link to={`/browse/${item.id}`}>View Product Details</Link></div>
             <CartButton item={item}/>
         </>

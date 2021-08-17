@@ -6,8 +6,7 @@ import Featured from "../components/Featured"
 function Home () {
     return(
         <>
-            <Hero />
-            <h2>Featured Items</h2>
+            <h2>Best Sellers</h2>
             <Featured />
         </>
     )

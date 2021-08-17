@@ -23,8 +23,7 @@ function Login () {
 
     }
     return(
-    <div>
-        
+
         <div className="auth-box">
         <h1>{user ? `${user}, are you sure you want to logout?` : "Login"}</h1>
             {user ? (<button onClick={()=>logoutUser()}>Logout</button>) :
@@ -63,7 +62,7 @@ function Login () {
             </form>
             )}
         </div>
-    </div>)
+)
 }
 
 export default Login

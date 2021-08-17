@@ -32,12 +32,12 @@ function Cart () {
     return(
         <>
             {isCartEmpty ? (
-                <div>
+                <div className="cart-container">
                     <h1 id="cart-message">Your cart is empty!</h1>
                     <button disabled>Purchase Items</button>
                 </div>
                 ) : (
-                <div>
+                <div className="cart-container">
                     <CartList type="full"/>
                     <div>
                         {subtotalCost()}
