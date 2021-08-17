@@ -1,7 +1,7 @@
-# A personal project to create an E-commerce site with a cart in one week
+# A personal project to create an E-commerce design with a cart
 
-I took on this project to practice creating a multipage site with a cart using React and React Router.
+Purpose: I took on this project to practice creating a multipage site with a cart using React and React Router.
 
-Challenges included implementing my own basic login/logout and local storage
+Challenges: Implementing my own basic login/logout and local storage
 
 
