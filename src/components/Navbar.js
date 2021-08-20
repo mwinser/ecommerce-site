@@ -32,6 +32,7 @@ function Navbar () {
 
     return (
     <nav className="navbar">
+        <div className="sale-hook">🍁 Feeling ready for fall? Get 10% off our autumn arrivals. <strong style={{'text-decoration': "underline"}}>Shop now.</strong></div>
         <div className="navbar-content">
           <div className="flower-border-container" style={!areWeHome? {height:4+'rem'}:null}>
             {areWeHome 
