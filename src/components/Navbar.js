@@ -33,13 +33,14 @@ function Navbar () {
     return (
     <nav className="navbar">
         <div className="navbar-content">
-          {areWeHome ? (
-            <div className="flower-border-container" >
-              <img className="flower-border" src={flowerBorder} alt="decorative border"/>
-              <img className="logo" src={petalLogo} alt="petal logo" />
-            </div>
-          ) : null
-          }
+          <div className="flower-border-container" style={!areWeHome? {height:4+'rem'}:null}>
+            {areWeHome 
+              ? <>
+                  <img className="flower-border" src={flowerBorder} alt="decorative border"/>
+                </>
+              : null}
+            <img className={areWeHome? "logo" : "small-logo"} src={petalLogo} alt="petal logo" />
+          </div>
           <div className="menu">
           <i onClick={()=>toggleMenu()}>
             <svg id="ex" height="30" width="30">

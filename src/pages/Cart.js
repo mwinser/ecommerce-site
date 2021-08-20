@@ -38,6 +38,7 @@ function Cart () {
                 </div>
                 ) : (
                 <div className="cart-container">
+                    <h1 id="cart-message">Your Cart</h1>
                     <CartList type="full"/>
                     <div>
                         {subtotalCost()}
