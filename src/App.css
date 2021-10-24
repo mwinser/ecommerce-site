@@ -20,6 +20,8 @@ body, html {
 .App {
   text-align: center;
   position: relative;
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
   background-color: #F9EDE9;
 }
@@ -50,11 +52,13 @@ button {
   box-shadow: 0 3px 5px rgba(0,0,0,0.12);
   min-width: 10ch;
   min-height: 3em;
+  transform: translateY(0);
   transition: 200ms all ease-in-out;
 }
 
 button:hover {
   opacity: .8;
+  transform: translateY(-5%);
 }
 
 button a:hover {
@@ -88,6 +92,11 @@ a, button {
   padding: .5em;
   background: mistyrose;
   width: 100vw;
+}
+.sale-hook>span {
+  text-decoration: underline;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .flower-border-container {
@@ -197,6 +206,7 @@ ul li {
 
 
 .content-wrap {
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -283,6 +293,10 @@ h1 {
 img {
   max-height: 342px;
 }
+li>a>img {
+  border: 2px solid white;
+  border-radius: 1rem;
+}
 .featured {
   width: 100%;
 }
@@ -314,10 +328,6 @@ img {
   max-width: 1440px;
 }
 
-.cart-container {
-  margin-top: 5em;
-}
-
 .cart-list {
   display: flex;
   flex-direction: column;
@@ -332,8 +342,9 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 300px;
+  gap: 5rem;
   margin: 1em 0;
+  padding: 0 3em;
 }
 
 .cart-list li img {
@@ -343,7 +354,8 @@ img {
 .cart-deets {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  gap: .5rem;
+  max-width: 80px;
 }
 
 .cart-deets * {
@@ -390,13 +402,13 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 1em;
+  padding: 3em 2em;
   margin-top: 5em;
   max-width: 1440px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
-.item-details img {
-  max-width: 150px;
-}
+
 
 footer {
   width: 100%;
@@ -466,15 +478,24 @@ footer {
     }
   .item-details{
     flex-direction: row;
+    justify-content: space-around;
   }
     
   .right {
     padding: 0 3em ;
+    max-width: 40vw;
     } 
+  .name-and-price {
+    padding: 0 1rem;
+  }
   }
 
   @media (min-width: 1440px) {
     .menu ul {
       right:15vw;
     }
+    .name-and-price {
+      padding: 0 4rem;
+    }
+
   }
