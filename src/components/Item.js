@@ -5,7 +5,6 @@ import CartButton from "./CartButton"
 
 function Item (props) {
     const item = props.item
-    
     if (props.type==="full"){
         return(
             <div className="item-details">

@@ -5,18 +5,36 @@ const Context = React.createContext()
 
 function ContextProvider({children}) {
     const [allItems] = useState(data)
-    const [cartItems, setCartItems] = useState([])
+    
     const prevRemember = localStorage.getItem('rememberMe')=== "true"
     const prevUser = prevRemember ? localStorage.getItem('user'): null
+    const prevItems = localStorage.getItem('cart') ? allItems.filter(item => localStorage.getItem('cart').split(" ").includes(item.id)) : []
+    const [cartItems, setCartItems] = useState(prevItems)
     const [user, setUser] = useState(prevUser)
     const [rememberMe, setRememberMe] = useState(prevRemember)
     const [showPopUps, setShowPopUps] = useState(true)
 
+
     function addToCart(newItem){
+        localStorage.getItem('cart') 
+            ?
+                localStorage.setItem('cart', localStorage.getItem('cart') + " " + newItem.id)
+            :
+                localStorage.setItem('cart', newItem.id)
+
         setCartItems(prevCartItems=> [...prevCartItems, newItem])
         
     }
     function removeFromCart(removingItem){
+        if (localStorage.getItem('cart'))
+            localStorage.setItem('cart', 
+                localStorage
+                    .getItem('cart')
+                    .split(" ")
+                    .filter(item=>{return item !== removingItem.id})
+                    .join(' ')
+            )
+
         setCartItems(prevCartItems=> prevCartItems.filter(cartItem=>cartItem.id!==removingItem.id))
 
     }

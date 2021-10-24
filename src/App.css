@@ -88,7 +88,7 @@ a, button {
 
 .sale-hook {
   font-family: "DM Sans", sans-serif;
-  font-size: 1.1rem;
+  font-size: 1rem;
   padding: .5em;
   background: mistyrose;
   width: 100vw;
@@ -147,7 +147,7 @@ ul li {
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 2rem;
+  top: 5vh;
   right: 5vw;
   height: 66px;
   z-index: 2;
