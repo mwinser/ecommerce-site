@@ -43,8 +43,8 @@ function Navbar () {
             <img className={areWeHome? "logo" : "small-logo"} src={petalLogo} alt="petal logo" />
           </div>
           <div className="menu">
-          <i onClick={()=>toggleMenu()}>
-            <svg id="ex" height="30" width="30">
+          <i >
+            <svg onClick={()=>toggleMenu()} id="ex" height="30" width="30">
               <line className={isMenuOpen ? "ex top one" : "ex top"} x1="3" y1="15" x2="27" y2="15"  />
               <line className={isMenuOpen ? "ex two" : "ex"} x1="3" y1="15" x2="27" y2="15" />
               <line className={isMenuOpen ? "ex bottom three" : "ex bottom"} x1="3" y1="15" x2="27" y2="15" />
