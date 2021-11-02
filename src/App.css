@@ -107,6 +107,7 @@ a, button {
   max-height: 961px;
   overflow: hidden;
   background: #f7f7f7;
+
 }
 .flower-border {
   width: 100%;
@@ -127,7 +128,6 @@ a, button {
   justify-content: flex-end;
   align-items: flex-start;
   padding: 0;
-  max-width: 1440px;
 }
 
 
@@ -531,6 +531,9 @@ footer {
     }
     .name-and-price {
       padding: 0 4rem;
+    }
+    .small-logo {
+      margin-left: 3rem;
     }
 
   }
